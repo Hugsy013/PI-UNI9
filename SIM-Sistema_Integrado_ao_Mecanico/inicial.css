@@ -96,6 +96,7 @@ p {
     text-align: center;
     transition: transform 0.3s;
     padding: 10px; /* Adicionando padding ao card */
+    
 }
 
 .card:hover {
