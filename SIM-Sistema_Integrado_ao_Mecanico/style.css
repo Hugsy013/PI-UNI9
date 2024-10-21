@@ -1,0 +1,156 @@
+/* Navbar lateral esquerda */
+.sidebar {
+    width: 50px; /* Largura da sidebar */
+    background-color: #333;
+    height: 100vh; /* Altura total */
+    position: fixed; /* Fixa na tela */
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+    padding: 20px 0;
+}
+
+.sidebar img {
+    width: 50px; /* Tamanho do logo */
+    margin-bottom: 20px; /* Espaçamento entre o logo e os links */
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1rem; /* Tamanho da fonte do título */
+    display: none; /* Oculta o título para não interferir no design */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px; /* Padding ajustado */
+    margin: 5px 0; /* Margem entre os links */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do link */
+    align-items: center; /* Centraliza verticalmente */
+    height: 30px; /* Altura dos links */
+    transition: background-color 0.3s;
+    font-size: 1.5rem; /* Tamanho da fonte dos links */
+}
+
+/* Conteúdo principal */
+.main-content {
+    margin-left: 70px; /* Espaço para a sidebar */
+    margin-top: 0px; /* Margem superior */
+    padding: 20px; /* Padding geral para o conteúdo principal */
+    background-color: white;
+    height: calc(100vh - 60px); /* Altura total do conteúdo ajustada */
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza o conteúdo */
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    position: relative; /* Para posicionar elementos */
+    background-image: url('logo-fundo.png'); /* URL do logo de fundo */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    background-position: 10px 10px; /* Posiciona a imagem no canto superior esquerdo */
+    background-size: 80px; /* Tamanho do logo de fundo */
+}
+
+h1 {
+    color: white;
+    margin: 20px; /* Margem acima e abaixo do título */
+}
+
+p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+/* Estilo para centralizar a imagem do logo */
+.logo-container {
+    display: flex; /* Usando flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Margem acima da imagem, ajuste conforme necessário */
+}
+
+.centralizar-logo {
+    width: 300px; /* Tamanho da imagem, ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Container dos cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Adiciona wrap para que os cards se ajustem em várias linhas */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 200px; /* Largura do card */
+    height: 300px; /* Altura do card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    padding: 10px;
+    margin: 10px; /* Adiciona margem ao redor do card */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.card img {
+    width: 80px; /* Tamanho da imagem */
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #007BFF;
+}
+
+/* Botão de usuário no canto superior direito */
+.user-button {
+    position: fixed;
+    top: 10px;  /* Posição no topo da página */
+    right: 10px;  /* Posição no canto direito */
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.user-button img {
+    width: 20px;  /* Tamanho do ícone de usuário */
+    height: 20px;  /* Tamanho do ícone de usuário */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Empilha os cards verticalmente no mobile */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Cards ocupam toda a largura disponível no mobile */
+        max-width: 150px; /* Define um tamanho máximo para os cards no mobile */
+    }
+}
