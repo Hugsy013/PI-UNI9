@@ -1,9 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 /* Navbar lateral esquerda */
 .sidebar {
     width: 50px; /* Largura da sidebar */
@@ -47,7 +41,7 @@ body {
 /* Conteúdo principal */
 .main-content {
     margin-left: 70px; /* Espaço para a sidebar */
-    margin-top: 60px; /* Margem superior */
+    margin-top: 0px; /* Margem superior */
     padding: 20px; /* Padding geral para o conteúdo principal */
     background-color: white;
     height: calc(100vh - 60px); /* Altura total do conteúdo ajustada */
@@ -55,7 +49,6 @@ body {
     flex-direction: column; /* Organiza os itens em coluna */
     align-items: center; /* Centraliza o conteúdo */
     justify-content: flex-start; /* Alinha o conteúdo no topo */
-    border: 1px solid #ccc; /* Adiciona uma borda */
     position: relative; /* Para posicionar elementos */
     background-image: url('logo-fundo.png'); /* URL do logo de fundo */
     background-repeat: no-repeat; /* Não repetir a imagem */
@@ -64,13 +57,25 @@ body {
 }
 
 h1 {
-    color: #333;
-    margin: 20px 0; /* Margem acima e abaixo do título */
+    color: white;
+    margin: 20px; /* Margem acima e abaixo do título */
 }
 
 p {
     color: #666;
     font-size: 1.2rem;
+}
+
+/* Estilo para centralizar a imagem do logo */
+.logo-container {
+    display: flex; /* Usando flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Margem acima da imagem, ajuste conforme necessário */
+}
+
+.centralizar-logo {
+    width: 300px; /* Tamanho da imagem, ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Container dos cards */
@@ -79,14 +84,15 @@ p {
     justify-content: center;
     gap: 20px; /* Espaço entre os cards */
     margin-top: 30px;
+    flex-wrap: wrap; /* Adiciona wrap para que os cards se ajustem em várias linhas */
 }
 
 .card {
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 8px;
-    width: 200px; /* Aumentando a largura do card */
-    height: 300px; /* Aumentando a altura do card */
+    width: 200px; /* Largura do card */
+    height: 300px; /* Altura do card */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,8 +100,8 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s;
-    padding: 10px; /* Adicionando padding ao card */
-    
+    padding: 10px;
+    margin: 10px; /* Adiciona margem ao redor do card */
 }
 
 .card:hover {
@@ -134,46 +140,17 @@ p {
 .user-button img {
     width: 20px;  /* Tamanho do ícone de usuário */
     height: 20px;  /* Tamanho do ícone de usuário */
-    border-radius: 50%;
 }
 
-.logo-container {
-    position: fixed;
-    top: 5px;  /* Distância do topo */
-    left: 50px; /* Distância da esquerda */
-    z-index: 1000; /* Garante que o logo fique à frente de outros elementos */
-}
-
-.logo-container img {
-    width: 170px;  /* Ajuste o tamanho do logo */
-}
-
-/* Media queries para responsividade */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 40px; /* Reduz a largura da sidebar em telas menores */
-    }
-
-    .main-content {
-        margin-left: 50px; /* Ajusta o espaço para a sidebar */
-    }
-
-    .user-button {
-        padding: 8px; /* Reduz o padding do botão do usuário */
-    }
-
-    .user-button img {
-        width: 18px; /* Ajusta o tamanho do ícone de usuário */
-        height: 18px;
-    }
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
     .card-container {
-        width: 40px; /* Reduz a largura da sidebar em telas menores */
+        flex-direction: column; /* Empilha os cards verticalmente no mobile */
+        align-items: center;
     }
 
     .card {
-        margin-left: 50px; /* Ajusta o espaço para a sidebar */
+        width: 100%; /* Cards ocupam toda a largura disponível no mobile */
+        max-width: 150px; /* Define um tamanho máximo para os cards no mobile */
     }
 }
