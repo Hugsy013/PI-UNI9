@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 /* Navbar lateral esquerda */
@@ -166,5 +165,15 @@ p {
     .user-button img {
         width: 18px; /* Ajusta o tamanho do ícone de usuário */
         height: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        width: 40px; /* Reduz a largura da sidebar em telas menores */
+    }
+
+    .card {
+        margin-left: 50px; /* Ajusta o espaço para a sidebar */
     }
 }
