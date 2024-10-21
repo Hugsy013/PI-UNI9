@@ -1,4 +1,8 @@
 <?php
+require_once("conexaobd.php");
+?>
+
+<?php
 session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     header('Location: dashboard.php');
@@ -8,7 +12,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+$login
     // Verificação simples (para exemplo; substituir por verificação de banco de dados)
     if ($username === 'admin' && $password === '1234') {
         $_SESSION['loggedin'] = true;
