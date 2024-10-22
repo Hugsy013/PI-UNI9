@@ -12,9 +12,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-$login
+$login = "SELECT * FROM tb_admin where login = '{$username}' and senha = '{$password}'";
+$rs_login = mysqli_query($conn_bd_sim, $login) or die($mysqli_error($conn_bd_sim));
+$linha_login = mysqli_num_rows($rs_login);
+
     // Verificação simples (para exemplo; substituir por verificação de banco de dados)
-    if ($username === 'admin' && $password === '1234') {
+    if ($linha_login == 1) {
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
         header('Location: dashboard.php');
