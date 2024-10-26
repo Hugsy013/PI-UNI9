@@ -33,14 +33,14 @@ VALUES (NULL, '$cnpj', '$nome', '$razaoSocial', '$insEstadual', '$email', '$tele
 $executar_inserir = mysqli_query($conn_bd_sim, $inserir) or die($mysqli_error($conn_bd_sim));
 
 
-$colaborador = $_POST['colaborador'];
+/*$colaborador = $_POST['colaborador'];
 $problema = $_POST['problema'];
 
 $inserir_pedido = "INSERT INTO tb_pedido (idPedido, idPf, idPj, resolvido, problema, colaborador, dataInicio, dataFim) VALUES (NULL, NULL, LAST_INSERT_ID(), '0', '$problema', '$colaborador', current_timestamp(), NULL)";
 
-$executar_pedido = mysqli_query($conn_bd_sim, $inserir_pedido) or die($mysqli_error($conn_bd_sim));
+$executar_pedido = mysqli_query($conn_bd_sim, $inserir_pedido) or die($mysqli_error($conn_bd_sim));*/
 
-if($executar_inserir == true && $executar_pedido == true){
+if($executar_inserir == true /*&& $executar_pedido == true*/){
 	echo('<script> alert("Dado inserido !! :)"); 
 	window.location.href="index.php";
 	</script>');
