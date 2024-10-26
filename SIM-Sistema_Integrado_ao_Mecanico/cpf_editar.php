@@ -45,7 +45,7 @@ $inserir_pedido = "INSERT INTO tb_pedido (idPedido, idPf, idPj, resolvido, probl
 $executar_pedido = mysqli_query($conn_bd_sim, $inserir_pedido) or die($mysqli_error($conn_bd_sim));*/
 
 if($executar_dado == true /*&& $executar_pedido == true*/){
-	echo('<script> alert("Dado inserido !! :)"); 
+	echo('<script> alert("Dado atualizado !! :)"); 
 	window.location.href="index.php";
 	</script>');
 } else {
@@ -85,8 +85,8 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
                        title="O RG deve ter de 7 a 9 dígitos, ou no formato XX.XXX.XXX-X">
             </div>
             <div class="form-group-cpf">
-                <label for="nascimento" value="<?php echo($row_rs_editar['nascimento'])?>">Data de Nascimento</label>
-                <input type="date" name="nascimento" id="nascimento" required>
+                <label for="nascimento" >Data de Nascimento</label>
+                <input type="date" value="<?php echo($row_rs_editar['nascimento'])?>" name="nascimento" id="nascimento" required>
             </div>
             <div class="form-group-cpf">
                 <label for="email">E-mail</label>
