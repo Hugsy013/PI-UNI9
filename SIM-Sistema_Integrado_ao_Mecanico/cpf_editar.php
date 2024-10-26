@@ -35,7 +35,7 @@ $editar_dado = "UPDATE tb_pf SET cpf = '$cpf', nome = '$nome',
  rg = '$rg', nascimento = '$nascimento', email = '$email', celular = '$telefone',
   idVeiculo = '$idVeiculo', placa = '$placa', corCarro = '$corCarro', endereco = '$endereco' WHERE tb_pf.idPf = 7;";
 
-$executar_dado = mysqli_query($conn_bd_sim, $editar_dado) or die($mysqli_error($conn_bd_sim));;
+$executar_dado = mysqli_query($conn_bd_sim, $editar_dado) or die($mysqli_error($conn_bd_sim));
 
 /*$colaborador = $_POST['colaborador'];
 $problema = $_POST['problema'];
