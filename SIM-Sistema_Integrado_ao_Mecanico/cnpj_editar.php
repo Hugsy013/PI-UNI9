@@ -38,7 +38,7 @@ $editar_dado = "UPDATE tb_pj SET cnpj = '$cnpj', nome = '$nome',
 $executar_dado = mysqli_query($conn_bd_sim, $editar_dado) or die($mysqli_error($conn_bd_sim));
 
 
-/*$colaborador = $_POST['colaborador'];
+/*$colaboradora = $_POST['colaborador'];
 $problema = $_POST['problema'];
 
 $inserir_pedido = "INSERT INTO tb_pedido (idPedido, idPf, idPj, resolvido, problema, colaborador, dataInicio, dataFim) VALUES (NULL, NULL, LAST_INSERT_ID(), '0', '$problema', '$colaborador', current_timestamp(), NULL)";
