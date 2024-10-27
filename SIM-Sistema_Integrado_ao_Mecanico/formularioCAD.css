@@ -1,3 +1,5 @@
+/* -------- formulario.css -------- */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -43,7 +45,7 @@ body {
 }
 
 .logo-container {
-    position: absolute;
+    position:absolute;
     top: 0%;
     left: 60px;
     z-index: 1000;
@@ -59,6 +61,7 @@ h2 {
     margin-top: 10px;
     margin-bottom: 50px;
 }
+
 
 .form-section-cnpj {
     max-width: auto;
@@ -127,7 +130,7 @@ input[type="reset"] {
     transition: background-color 0.3s;
 }
 .container-botoes {
-    display: flex;
+    display:flex;
     justify-content: flex-end; /* Alinha os botões à direita */
     margin-top: 50px;
     gap: 15px;

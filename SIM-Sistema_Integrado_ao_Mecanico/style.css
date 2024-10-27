@@ -2,21 +2,22 @@
 
 /* Navbar lateral esquerda */
 .sidebar {
-    width: 50px; /* Largura da sidebar */
+    width: 50px;
     background-color: #333;
-    height: 100vh; /* Altura total */
-    position: fixed; /* Fixa na tela */
+    height: 100vh;
+    position: fixed;
     left: 0;
     top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo */
+    align-items: center;
     padding: 20px 0;
 }
 
 .sidebar img {
-    width: 50px; /* Tamanho do logo */
-    margin-bottom: 20px; /* Espaçamento entre o logo e os links */
+    width: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .sidebar h2 {
@@ -52,7 +53,6 @@
     align-items: center; /* Centraliza o conteúdo */
     justify-content: flex-start; /* Alinha o conteúdo no topo */
     position: relative; /* Para posicionar elementos */
-    background-image: url('logo-fundo.png'); /* URL do logo de fundo */
     background-repeat: no-repeat; /* Não repetir a imagem */
     background-position: 10px 10px; /* Posiciona a imagem no canto superior esquerdo */
     background-size: 80px; /* Tamanho do logo de fundo */
@@ -70,14 +70,15 @@ p {
 
 /* Estilo para centralizar a imagem do logo */
 .logo-container {
-    display: flex; /* Usando flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    margin-top: 20px; /* Margem acima da imagem, ajuste conforme necessário */
+    position:absolute;
+    top: 0%;
+    left: 60px;
+    z-index: 1000;
 }
 
 .centralizar-logo {
-    width: 300px; /* Tamanho da imagem, ajuste conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 170px; /* Ajuste o tamanho do logo conforme necessário */
+    height: auto; /* Mantém a proporção do logo */
 }
 
 /* Container dos cards */
@@ -243,5 +244,93 @@ input[type="text"], input[type="password"] {
 .login-btn:hover {
     background-color: #e65c00;
 }
+
+/*-------- forgot.css --------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box {
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.forgot-password {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #FF6B00;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background-color: #FF6B00;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #e65c00;
+}
+
 
 
