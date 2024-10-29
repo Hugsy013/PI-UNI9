@@ -173,3 +173,53 @@ input[type="reset"] {
         gap: 15px;
     }
 }
+
+
+/* Tabela */
+
+/* Estilos básicos para centralizar a tabela */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+  /* Estilos da tabela */
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: -300px;
+}
+  
+  /* Estilo para o cabeçalho */
+  th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Estilos para as células de dados */
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Efeito ao passar o mouse */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Alterna a cor das linhas */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
