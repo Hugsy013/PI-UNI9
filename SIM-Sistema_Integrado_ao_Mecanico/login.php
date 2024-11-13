@@ -13,7 +13,7 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
 $login = "SELECT * FROM tb_admin where login = '{$username}' and senha = '{$password}'";
 $rs_login = mysqli_query($conn_bd_sim, $login) or die($mysqli_error($conn_bd_sim));
 $linha_login = mysqli_num_rows($rs_login);

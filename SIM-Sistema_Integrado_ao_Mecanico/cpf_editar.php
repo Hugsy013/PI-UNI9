@@ -3,7 +3,6 @@ require_once("conexaobd.php");
 ?>
 
 <?php
-
 $veiculo = "SELECT * FROM tb_veiculo";
 
 $rs_veiculo = mysqli_query($conn_bd_sim, $veiculo) or die($mysqli_error($conn_bd_sim));
