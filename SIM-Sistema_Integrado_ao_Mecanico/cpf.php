@@ -3,6 +3,17 @@ require_once("conexaobd.php");
 ?>
 
 <?php
+include("sessao_verifica.php");
+$idAdmin = $_SESSION['idAdmin'];
+
+$permissao = "SELECT * FROM tb_admin where idAdmin = {$idAdmin}";
+$rs_permissao = mysqli_query($conn_bd_sim, $permissao) or die($mysqli_error($conn_bd_sim));
+$row_rs_permissao = mysqli_fetch_assoc($rs_permissao);
+
+if($row_rs_permissao['permissao'] != 'a' && $row_rs_permissao['permissao'] != 'r' && $row_rs_permissao['permissao'] != 'ce'){
+    header("Location: index.php");
+}
+
 
 $veiculo = "SELECT * FROM tb_veiculo";
 
@@ -127,7 +138,7 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
     </section>
     <?php 
 	mysqli_free_result($rs_veiculo);
-	
+	mysqli_free_result($rs_permissao);
 	mysqli_close($conn_bd_sim);
 	
 	?>

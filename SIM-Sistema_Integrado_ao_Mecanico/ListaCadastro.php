@@ -84,7 +84,6 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
       <?php 
 	mysqli_free_result($rs_PF);
   mysqli_free_result($rs_permissao);
-	
 	mysqli_close($conn_bd_sim);
 	
 	?>
