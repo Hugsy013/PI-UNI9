@@ -121,7 +121,7 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
             </div>  
             <div class="form-group-cpf">
                 <label for="corCarro">Cor do Carro</label>
-                <input type="color" name="corCarro" id="corCarro" value="<?php echo($row_rs_editar['corCarro'])?>">
+                <input type="text" name="corCarro" id="corCarro" value="<?php echo($row_rs_editar['corCarro'])?>">
             </div>
             <div class="form-group-cpf">
                 <label for="endereco">Endereço</label>

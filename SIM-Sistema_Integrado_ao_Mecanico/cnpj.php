@@ -121,7 +121,7 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
             </div>  
             <div class="form-group-cnpj">
                 <label for="corCarro">Cor do Carro</label>
-                <input type="color" name="corCarro" id="corCarro">
+                <input type="text" name="corCarro" id="corCarro">
             </div>
             <div class="form-group-cnpj">
                 <label for="endereco">Endereço</label>
