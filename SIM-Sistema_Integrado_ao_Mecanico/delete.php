@@ -10,9 +10,9 @@ $permissao = "SELECT * FROM tb_admin where idAdmin = {$idAdmin}";
 $rs_permissao = mysqli_query($conn_bd_sim, $permissao) or die($mysqli_error($conn_bd_sim));
 $row_rs_permissao = mysqli_fetch_assoc($rs_permissao);
 
-if($row_rs_permissao['permissao'] != 'a' && $row_rs_permissao['permissao'] != 'd' && $row_rs_permissao['permissao'] != 'ce'){
+if($row_rs_permissao['permissao'] != 'a' && $row_rs_permissao['permissao'] != 'd'){
     header("Location: index.php");
-
+}
 if (isset ($_GET ['idPf'])){
     $idPf = $_GET ['idPf'];
 
