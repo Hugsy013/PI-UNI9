@@ -67,13 +67,13 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <td><?php echo ($row_rs_PF['marca']." ".$row_rs_PF['modelo']); ?></td>
             <td><?php echo ($row_rs_PF['placa']); ?></td>
         <!-- Deletar --><td <?php if($row_rs_permissao['permissao'] != 'd' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>><a href="delete.php?idPf=<?php echo($row_rs_PF['idPf']);?>" onclick="return confirm('Tem certeza que deseja excluir este registro?');">
-              <img src="imagens/lixeira.png" alt="Excluir" style="width: 20px; height: 20px;" title="Excluir registro"></td> 
+              <img src="imagens/deletar.png" alt="Excluir" style="width: 20px; height: 20px;" title="Excluir registro"></td> 
         <!-- Visualizar --><td><a href="Visualizar.php?idPf=<?php echo($row_rs_PF['idPf']);?>">
-              <img src="imagens/" alt="Visualizar" style="width: 20px; height: 20px;" title="visualizar Cadastro"></td>
+              <img src="imagens/visualizar.png" alt="Visualizar" style="width: 20px; height: 20px;" title="visualizar Cadastro"></td>
           <!-- Editar --><td <?php if($row_rs_permissao['permissao'] != 'e' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>><a href="cpf_editar.php?idPf=<?php echo($row_rs_PF['idPf']);?>">
-          <img src="imagens/" alt="Editar" style="width: 20px; height: 20px;" title="Editar registro"></td>
+          <img src="imagens/editar.png" alt="Editar" style="width: 20px; height: 20px;" title="Editar registro"></td>
           <!-- Inserir --><td <?php if($row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>><a href="cpf.php?">
-            <img src="imagens/" alt="Inserir" style="width: 20px; height: 20px;" title="Inserir registro"></td>
+            <img src="imagens/inserir.png" alt="Inserir" style="width: 20px; height: 20px;" title="Inserir registro"></td>
             </tr>
 
           <?php } while($row_rs_PF = mysqli_fetch_assoc($rs_PF))?>
