@@ -3,7 +3,7 @@
 /* Navbar lateral esquerda */
 .sidebar {
     width: 50px;
-    background-color: #333;
+    background-color: #505050;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -12,11 +12,11 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-}
+    }
 
 .sidebar img {
     width: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
@@ -31,12 +31,10 @@
 .sidebar a {
     color: white;
     text-decoration: none;
-    padding: 15px; /* Padding ajustado */
-    margin: 5px 0; /* Margem entre os links */
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo do link */
+
+    /* display: flex; */
     align-items: center; /* Centraliza verticalmente */
-    height: 30px; /* Altura dos links */
+    
     transition: background-color 0.3s;
     font-size: 1.5rem; /* Tamanho da fonte dos links */
 }
@@ -132,18 +130,74 @@ p {
 .user-button {
     position: fixed;
     top: 10px;  /* Posição no topo da página */
-    right: 10px;  /* Posição no canto direito */
+    right: 20px;  /* Posição no canto direito */
     background-color: #f0f0f0;
     border-radius: 50%;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    width: 40px; /* Tamanho do contêiner */
+    height: 40px; /* Tamanho do contêiner */
 }
 
+/* Efeito de hover no botão */
+.user-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo para a imagem do usuário */
 .user-button img {
     width: 20px;  /* Tamanho do ícone de usuário */
-    height: 20px;  /* Tamanho do ícone de usuário */
+    height: 20px; /* Tamanho do ícone de usuário */
 }
+
+/* Estilos para o menu dropdown */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 60px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Estilos para os itens do menu */
+.dropdown-menu li {
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    /* padding: 10px; */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar o menu ao passar o mouse */
+.user-button:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
