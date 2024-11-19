@@ -26,41 +26,40 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário CNPJ</title>
-    <link rel="stylesheet" href="formularioCAD.css">
+    <title>Listagem de Clientes</title>
+    <link rel="stylesheet" href="Lista.css">
 </head>
 <body>
-
-    <div class="sidebar">
-        <img src="imagens/logo2.png" alt="Logo">
-        <a href="#" title="Configurações"><img src="imagens/engrenagem.png" alt="Configurações" style="width: 30px; height: 30px;"></a>
-        <a href="#" title="Segurança"><img src="imagens/cadeado.png" alt="Segurança" style="width: 30px; height: 30px;"></a>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo1.png" alt="Logo">
+            <h1>Sistema Integrado ao Mecânico</h1>
+        </div>
+        <div class="user-button">
+        <img src="imagens/usuario.png" alt="Usuário">
     </div>
-
-    <div class="logo-container">
-        <img src="imagens/logo1.png" alt="Logo do Conteúdo Principal">
-    </div>
-    <div class="user-button">
-      <img src="imagens/usuario.png" alt="Usuário">
-      <ul class="dropdown-menu">
-          <li><a href="#">Sair</a></li>
-      </ul>
-
-    </div>
-   
-    <table>
-        <thead>
-          <tr>
-            <th>idPF</th>
-            <th>nome</th>
-            <th>E-mail</th>
-            <th>Celular</th>
-            <th>Veículo</th>
-            <th>Placa</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
+    </header>
+    <main>
+        <section class="client-list">
+            <div class="header">
+                <h2>Listagem de Clientes</h2>
+                <div class="add-client">
+                <img src="imagens/inserir.png" alt="Inserir Registro" style="width: 45px; height: 30p'x;" title="Cadastrar Cliente"></td>    
+              </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Clientes</th>
+                        <th>E-mail</th>
+                        <th>Celular</th>
+                        <th>Veículo</th>
+                        <th>Placa</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
 
         <?php do {?>
             

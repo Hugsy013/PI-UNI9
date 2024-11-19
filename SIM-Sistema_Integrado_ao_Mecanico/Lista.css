@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 90px;
+    margin-right: 60px;
+}
+
+header .logo h1 {
+    font-size: 18px;
+}
+
+main {
+    padding: 20px;
+}
+
+.client-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.client-list .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.client-list .header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.client-list .add-client .add-btn {
+    background-color: #f58c1f;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.client-list .add-client .add-btn:hover {
+    background-color: #e0781c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f5f5f5;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.action-btn.view:hover {
+    color: #3498db;
+}
+
+.action-btn.edit:hover {
+    color: #f1c40f;
+}
+
+.action-btn.delete:hover {
+    color: #e74c3c;
+}
+
+.user-button {
+    
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.user-button img {
+    width: 20px;  
+    height: 20px;  
+    border-radius: 50%;
+}
