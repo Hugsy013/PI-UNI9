@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci Minha Senha - Plataforma SIM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="imagens/logo2.png" alt="Logo" class="logo">
+            <h2>Recuperação de Senha</h2>
+            <p>Insira o e-mail cadastrado para receber instruções de recuperação</p>
+            <form action="forgot_password.php" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <button type="submit" class="login-btn">Enviar</button>
+            </form>
+            <a href="login.php" class="forgot-password">Voltar ao Login</a>
+        </div>
+    </div>
+</body>
+</html>
