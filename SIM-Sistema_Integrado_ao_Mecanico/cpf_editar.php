@@ -6,6 +6,8 @@ require_once("conexaobd.php");
 include("sessao_verifica.php");
 $idAdmin = $_SESSION['idAdmin'];
 
+$idPf = $_GET ['idPf'];
+
 $permissao = "SELECT * FROM tb_admin where idAdmin = {$idAdmin}";
 $rs_permissao = mysqli_query($conn_bd_sim, $permissao) or die($mysqli_error($conn_bd_sim));
 $row_rs_permissao = mysqli_fetch_assoc($rs_permissao);
@@ -20,7 +22,7 @@ $rs_veiculo = mysqli_query($conn_bd_sim, $veiculo) or die($mysqli_error($conn_bd
 $row_rs_veiculo = mysqli_fetch_assoc($rs_veiculo);
 
 
-$cpf_editar = "SELECT * FROM tb_pf WHERE idPf = '7'";
+$cpf_editar = "SELECT * FROM tb_pf WHERE idPf = '$idPf'";
 
 $rs_editar = mysqli_query($conn_bd_sim, $cpf_editar) or die($mysqli_error($conn_bd_sim));
 
@@ -31,7 +33,7 @@ if(isset($_POST['submit'])) {
 $cpf = $_POST['cpf'];
 $nome = $_POST['nome'];
 $rg = $_POST['rg'];
-$nascimento = $_POST['nascimento'];
+//$nascimento = $_POST['nascimento'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $idVeiculo = $_POST['idVeiculo'];
@@ -41,8 +43,8 @@ $endereco = $_POST['endereco'];
 
 
 $editar_dado = "UPDATE tb_pf SET cpf = '$cpf', nome = '$nome',
- rg = '$rg', nascimento = '$nascimento', email = '$email', celular = '$telefone',
-  idVeiculo = '$idVeiculo', placa = '$placa', corCarro = '$corCarro', endereco = '$endereco' WHERE tb_pf.idPf = 7;";
+ rg = '$rg', nascimento = NULL, email = '$email', celular = '$telefone',
+  idVeiculo = '$idVeiculo', placa = '$placa', corCarro = '$corCarro', endereco = '$endereco' WHERE tb_pf.idPf = $idPf;";
 
 $executar_dado = mysqli_query($conn_bd_sim, $editar_dado) or die($mysqli_error($conn_bd_sim));
 
@@ -73,6 +75,7 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formularioCAD.css">
     <title>Formulário CPF</title>
 </head>
 <body>
@@ -93,10 +96,10 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
                        pattern="\d{7,9}|\d{2}\.\d{3}\.\d{3}-\d{1}" 
                        title="O RG deve ter de 7 a 9 dígitos, ou no formato XX.XXX.XXX-X">
             </div>
-            <div class="form-group-cpf">
+            <!--<div class="form-group-cpf">
                 <label for="nascimento" >Data de Nascimento</label>
-                <input type="date" value="<?php echo($row_rs_editar['nascimento'])?>" name="nascimento" id="nascimento" required>
-            </div>
+                <input type="date" value="<?php //echo($row_rs_editar['nascimento'])?>" name="nascimento" id="nascimento" required>
+            </div>-->
             <div class="form-group-cpf">
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email" value="<?php echo($row_rs_editar['email'])?>" required>

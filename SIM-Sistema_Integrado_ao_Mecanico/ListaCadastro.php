@@ -43,7 +43,7 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
     <div class="user-button">
       <img src="imagens/usuario.png" alt="Usuário">
       <ul class="dropdown-menu">
-          <li><a href="#">Sair</a></li>
+          <li><a href="logout.php">Sair</a></li>
       </ul>
 
     </div>

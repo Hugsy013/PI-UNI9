@@ -22,14 +22,14 @@ $rs_veiculo = mysqli_query($conn_bd_sim, $veiculo) or die($mysqli_error($conn_bd
 $row_rs_veiculo = mysqli_fetch_assoc($rs_veiculo);
 
 
-if(isset($_POST['cpf']) && isset($_POST['nome']) && isset($_POST['rg']) && isset($_POST['nascimento']) && isset($_POST['email']) && 
+if(isset($_POST['cpf']) && isset($_POST['nome']) && isset($_POST['rg']) /*&& isset($_POST['nascimento'])*/ && isset($_POST['email']) && 
 isset($_POST['telefone']) && isset($_POST['idVeiculo']) && isset($_POST['placa']) && isset($_POST['corCarro']) &&
-isset($_POST['endereco']) && isset($_POST['colaborador']) && isset($_POST['problema'])) {
+isset($_POST['endereco'])) {
 
 $cpf = $_POST['cpf'];
 $nome = $_POST['nome'];
 $rg = $_POST['rg'];
-$nascimento = $_POST['nascimento'];
+//$nascimento = $_POST['nascimento'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $idVeiculo = $_POST['idVeiculo'];
@@ -37,8 +37,8 @@ $placa = $_POST['placa'];
 $corCarro = $_POST['corCarro'];
 $endereco = $_POST['endereco'];
 
-$inserir_pf = "INSERT INTO tb_pf (idPf, cpf, nome, rg, nascimento, email, celular, idVeiculo, placa, corCarro, endereco) 
-VALUES (NULL, '$cpf', '$nome', '$rg', '$nascimento', '$email', '$telefone', '$idVeiculo', '$placa', '$corCarro', '$endereco');";
+$inserir_pf = "INSERT INTO tb_pf (idPf, cpf, nome, rg, nascimento, email, celular, idVeiculo, placa, corCarro, endereco)
+VALUES (NULL, '$cpf', '$nome', '$rg',  '0000-00-00', '$email', '$telefone', '$idVeiculo', '$placa', '$corCarro', '$endereco');";
 
 $executar_inserir = mysqli_query($conn_bd_sim, $inserir_pf) or die($mysqli_error($conn_bd_sim));
 
@@ -70,6 +70,7 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formularioCAD.css">
     <title>Formulário CPF</title>
 </head>
 <body>
@@ -90,10 +91,10 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
                        pattern="\d{7,9}|\d{2}\.\d{3}\.\d{3}-\d{1}" 
                        title="O RG deve ter de 7 a 9 dígitos, ou no formato XX.XXX.XXX-X">
             </div>
-            <div class="form-group-cpf">
+            <!--<div class="form-group-cpf">
                 <label for="nascimento">Data de Nascimento</label>
                 <input type="date" name="nascimento" id="nascimento" required>
-            </div>
+            </div>-->
             <div class="form-group-cpf">
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email" required>
@@ -124,14 +125,14 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
                 <label for="endereco">Endereço</label>
                 <input type="text" name="endereco" id="endereco" placeholder="Rua Exemplo, 123">
             </div> 
-            <div class="form-group-cpf">
+            <!--<div class="form-group-cpf">
                 <label for="colaborador">Colaborador responsável</label>
                 <input type="text" name="colaborador" id="colaborador">
             </div>
             <div class="form-group-cpf">
                 <label for="problema">Problema:</label> <br>
                 <textarea name="problema" id="problema" rows="4" cols="50"></textarea>
-            </div>
+            </div>-->
 
             <input type="submit" value="Enviar">
         </form>

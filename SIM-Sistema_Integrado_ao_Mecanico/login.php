@@ -24,7 +24,7 @@ $row_rs_login = mysqli_fetch_assoc($rs_login);
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['idAdmin'] = $row_rs_login['idAdmin']; 
-        header('Location: index.php');
+        header('Location: ListaCadastro.php');
         exit;
     } else {
         $error = 'Nome de usuário ou senha incorretos!';

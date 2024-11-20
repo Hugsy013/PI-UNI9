@@ -81,7 +81,7 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <p> <?php echo($row_rs_PF['endereco']);?> </p>
             </div>
             <br>
-            <div class="form-group-cpf">
+            <!--<div class="form-group-cpf">
             <br>
             <h1>Colaborador</h1>
             <p> Rodrigo Santos</p>
@@ -100,8 +100,7 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <div class="form-group-cpf">
             <h1>Data Fim</h1>
             <p> 01/07/2024 </p>
-            </div>
-            <br>
+            </div>-->
             <div class="form-group-cpf">
             <h1>Status</h1>
             <p> Em Andamento </p>
