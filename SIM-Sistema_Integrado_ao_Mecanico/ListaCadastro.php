@@ -31,14 +31,12 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <img src="imagens/logo1.png" alt="Logo">
             <h1>Sistema Integrado ao Mecânico</h1>
         </div>
-        <div class="user-dropdown">
-            <div class="user-button">
-                <img src="imagens/usuario.png" alt="Usuário">
-            </div>
+        <div class="user-button">
+            <img src="imagens/usuario.png" alt="Usuário">
             <ul class="dropdown-menu">
-                <li><a href="logout.php">Sair</a></li>
-            </ul>
-        </div>
+            <li><a href="logout.php">Sair</a></li>
+        </ul>
+    </div>
         <div class="add-client" <?php if($row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
             <a href="cpf.php?" title="Cadastrar Cliente">
                 <img src="imagens/inserir.png" alt="Inserir Registro" class="add-icon">

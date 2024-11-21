@@ -37,7 +37,8 @@ header .logo h1 {
     font-weight: bold;
 }
 
-header .user-button {
+/* Botão de usuário no canto superior direito */
+.user-button {
     position: fixed;
     top: 10px;  /* Posição no topo da página */
     right: 20px;  /* Posição no canto direito */
@@ -54,20 +55,18 @@ header .user-button {
     height: 40px; /* Tamanho do contêiner */
 }
 
+/* Efeito de hover no botão */
 .user-button:hover {
     background-color: #e0e0e0;
 }
 
-header .user-button img {
-    width: 20px;
-    height: 20px;
+/* Estilo para a imagem do usuário */
+.user-button img {
+    width: 20px;  /* Tamanho do ícone de usuário */
+    height: 20px; /* Tamanho do ícone de usuário */
 }
 
-.add-client {
-    position: absolute;
-    right: 20px;
-    top: 100px;
-}
+/* Estilos para o menu dropdown */
 .dropdown-menu {
     position: absolute;
     right: 0;
@@ -85,79 +84,30 @@ header .user-button img {
     z-index: 1;
 }
 
-/* Container do dropdown */
-.user-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Estilo padrão do menu */
-.dropdown-menu {
-    position: absolute;
-    right: 0;
-    top: 100%; /* Alinha abaixo do botão */
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 100px;
-    padding: 10px 0;
-    list-style: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1;
-}
-
-/* Itens do menu */
+/* Estilos para os itens do menu */
 .dropdown-menu li {
     text-align: center;
 }
 
 .dropdown-menu li a {
     display: block;
-    padding: 10px;
+    /* padding: 10px; */
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     color: #333;
-    transition: background-color 0.3s ease;
 }
 
 .dropdown-menu li a:hover {
     background-color: #ddd;
 }
 
-/* Exibe o menu ao passar o mouse */
-.user-dropdown:hover .dropdown-menu {
+/* Mostrar o menu ao passar o mouse */
+.user-button:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
-
-/* Botão do usuário */
-.user-button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.user-button:hover {
-    background-color: #e0e0e0;
-}
-
-.user-button img {
-    width: 20px;
-    height: 20px;
-}
-
 
 .add-icon {
     width: 45px;
@@ -275,3 +225,8 @@ tbody td {
     }
 }
 
+.add-client {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
