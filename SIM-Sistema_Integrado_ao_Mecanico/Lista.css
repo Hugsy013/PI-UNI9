@@ -18,7 +18,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 header .logo {
@@ -37,11 +37,11 @@ header .logo h1 {
     font-weight: bold;
 }
 
-/* Botão de usuário no canto superior direito */
-.user-button {
+/* User dropdown */
+header .user-button {
     position: fixed;
-    top: 10px;  /* Posição no topo da página */
-    right: 20px;  /* Posição no canto direito */
+    top: 10px; /* Posição no topo da página */
+    right: 20px; /* Posição no canto direito */
     background-color: #f0f0f0;
     border-radius: 50%;
     padding: 5px;
@@ -55,18 +55,21 @@ header .logo h1 {
     height: 40px; /* Tamanho do contêiner */
 }
 
-/* Efeito de hover no botão */
 .user-button:hover {
     background-color: #e0e0e0;
 }
 
-/* Estilo para a imagem do usuário */
-.user-button img {
-    width: 20px;  /* Tamanho do ícone de usuário */
-    height: 20px; /* Tamanho do ícone de usuário */
+header .user-button img {
+    width: 20px;
+    height: 20px;
 }
 
-/* Estilos para o menu dropdown */
+.add-client {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
 .dropdown-menu {
     position: absolute;
     right: 0;
@@ -84,25 +87,30 @@ header .logo h1 {
     z-index: 1;
 }
 
-/* Estilos para os itens do menu */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-menu li {
     text-align: center;
 }
 
 .dropdown-menu li a {
     display: block;
-    /* padding: 10px; */
+    padding: 10px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     color: #333;
+    transition: background-color 
+
 }
 
 .dropdown-menu li a:hover {
     background-color: #ddd;
 }
 
-/* Mostrar o menu ao passar o mouse */
 .user-button:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -229,4 +237,25 @@ tbody td {
     position: absolute;
     right: 20px;
     top: 100px;
+}
+
+.action-cell a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    display: inline-block; /* Cada link ocupa um bloco sem espaços */
+    margin: 0 5px; /* Adiciona espaçamento entre ícones */
+}
+
+.action-cell img {
+    vertical-align: middle; /* Garante alinhamento correto dos ícones */
+    width: 20px; /* Ajusta tamanho dos ícones */
+    height: 20px;
+}
+
+/* Opcional: Remove espaços extras entre links */
+.action-cell {
+    font-size: 0; /* Remove espaços entre elementos inline */
+}
+
+.action-cell a {
+    font-size: 14px; /* Redefine o tamanho da fonte para o conteúdo interno */
 }
