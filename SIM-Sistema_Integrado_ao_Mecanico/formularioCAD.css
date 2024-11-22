@@ -1,19 +1,44 @@
-/* -------- formulario.css -------- */
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #F5F5F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Botão de usuário no canto superior direito */
-.user-button {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+
+}
+
+header {
+    position: relative;
+    background-color:  #f9f9f9;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    height: 70px;
+    margin-right: 20px;
+}
+
+/* User dropdown */
+header .user-button {
     position: fixed;
-    top: 10px;  /* Posição no topo da página */
-    right: 20px;  /* Posição no canto direito */
+    top: 10px; /* Posição no topo da página */
+    right: 20px; /* Posição no canto direito */
     background-color: #f0f0f0;
     border-radius: 50%;
     padding: 5px;
@@ -27,18 +52,15 @@ body {
     height: 40px; /* Tamanho do contêiner */
 }
 
-/* Efeito de hover no botão */
 .user-button:hover {
     background-color: #e0e0e0;
 }
 
-/* Estilo para a imagem do usuário */
-.user-button img {
-    width: 20px;  /* Tamanho do ícone de usuário */
-    height: 20px; /* Tamanho do ícone de usuário */
+header .user-button img {
+    width: 20px;
+    height: 20px;
 }
 
-/* Estilos para o menu dropdown */
 .dropdown-menu {
     position: absolute;
     right: 0;
@@ -56,25 +78,30 @@ body {
     z-index: 1;
 }
 
-/* Estilos para os itens do menu */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-menu li {
     text-align: center;
 }
 
 .dropdown-menu li a {
     display: block;
-    /* padding: 10px; */
+    padding: 10px;
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
     color: #333;
+    transition: background-color 
+
 }
 
 .dropdown-menu li a:hover {
     background-color: #ddd;
 }
 
-/* Mostrar o menu ao passar o mouse */
 .user-button:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -82,65 +109,26 @@ body {
 }
 
 
-
-.sidebar {
-    width: 50px;
-    background-color: #505050;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    }
-
-.sidebar img {
-    width: 50px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.logo-container {
-    position:absolute;
-    top: 0%;
-    left: 60px;
-    z-index: 1000;
-}
-
-.logo-container img {
-    width: 170px;
-}
-
-h2 {
-    text-align: left;
-    color: #333;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
-
-.form-section-cnpj {
+.form-section-cpf {
     max-width: auto;
-    margin: 100px auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 125px;
-    margin-left: 60px;
+    margin-top: 50px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 
-form {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.form-group-cnpj {
+.form-group-cpf {
     display: flex;
     flex-direction: column;
     color: #333;
@@ -236,15 +224,6 @@ input[type="reset"] {
 /* Tabela */
 
 /* Estilos básicos para centralizar a tabela */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
-  }
   
   /* Estilos da tabela */
   table {

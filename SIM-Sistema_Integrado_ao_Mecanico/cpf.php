@@ -71,11 +71,24 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="formularioCAD.css">
-    <title>Formulário CPF</title>
+    <title>Formulário PF</title>
 </head>
+
 <body>
-    <h2>Dados Cadastrais</h2>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo1.png" alt="Logo">
+        </div>
+        <div class="user-button">
+            <img src="imagens/usuario.png" alt="Usuário">
+            <ul class="dropdown-menu">
+            <li><a href="logout.php">Sair</a></li>
+        </ul>
+    </header>
+
+
     <section class="form-section-cpf">
+    <h2>Dados Cadastrais</h2></br>
         <form action="" method="post">
             <div class="form-group-cpf">
                 <label for="cpf">CPF</label>
@@ -137,6 +150,7 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
             <input type="submit" value="Enviar">
         </form>
     </section>
+
     <?php 
 	mysqli_free_result($rs_veiculo);
 	mysqli_free_result($rs_permissao);
