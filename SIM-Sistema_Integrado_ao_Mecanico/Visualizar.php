@@ -39,21 +39,19 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
     </header>
     <section class="form-section-cpf">
     <h2>Dados Cadastrais</h2></br>
-        <div class="form-group-cpf">
+    <form action="" method="post">
+             <div class="form-group-cpf">
                 <label for="nome">Nome</label>
                 <p> <?php echo($row_rs_PF['nome']);?> </p>
             </div>
-            <br>
-        <div class="form-group-cpf">
+            <div class="form-group-cpf">
              <label for="cpf">CPF</label>
             <p> <?php echo($row_rs_PF['cpf']);?> </p>
             </div>
-            <br>
             <div class="form-group-cpf">
                 <label for="rg">RG</label>
                  <p> <?php echo($row_rs_PF['rg']);?> </p>
             </div>
-            <br>
            <!-- <div class="form-group-cpf">
             <h1>Data de Nascimento</h1>
             <p> <?php echo($row_rs_PF['nascimento']);?> </p>
@@ -63,32 +61,26 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
                 <label for="email">E-mail</label>
                 <p> <?php echo($row_rs_PF['email']);?> </p>
             </div>
-            <br>
             <div class="form-group-cpf">
                 <label for="telefone">Telefone</label>
                 <p> <?php echo($row_rs_PF['celular']);?> </p>
             </div>
-            <br>
             <div class="form-group-cpf">
                 <label for="endereco">Endereço</label>
                 <p> <?php echo($row_rs_PF['endereco']);?> </p>
             </div>
-            <br>
             <div class="form-group-cpf">
                 <label for="idVeiculo">Veículo:</label>
                 <p> <?php echo($row_rs_PF['marca']." ".$row_rs_PF['modelo']); ?></p>     
             </div>  
-            <br>
             <div class="form-group-cpf">
                 <label for="corCarro">Cor do Carro</label>
                 <p> <?php echo($row_rs_PF['corCarro']);?> </p>
             </div>
-            <br>
             <div class="form-group-cpf">
                 <label for="placa">Placa</label>
                 <p> <?php echo($row_rs_PF['placa']);?> </p>
             </div>
-            <br>
             <!--<div class="form-group-cpf">
             <br>
             <h1>Colaborador</h1>
@@ -114,8 +106,8 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
                 <p> Em Andamento </p>
             </div>
             <br>
-        
             <input type="reset" value="Voltar" onclick="window.location.href='ListaCadastro.php'">
+            </form>
 
     </section>
     <?php 

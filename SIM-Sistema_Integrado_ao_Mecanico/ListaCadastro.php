@@ -36,12 +36,13 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <li><a href="logout.php">Sair</a></li>
         </ul>
     </div>
-        <div class="add-client" <?php if($row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
+    </header>
+    <div class="add-client" <?php if($row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
             <a href="cpf.php?" title="Cadastrar Cliente">
                 <img src="imagens/inserir.png" alt="Inserir Registro" class="add-icon">
             </a>    
         </div>
-    </header>
+        <br>
     <section class="client-list">
         <div class="header">
             <h2>Listagem de Clientes</h2>
@@ -72,10 +73,10 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
                                 <img src="imagens/visualizar.png" alt="Visualizar" class="action-icon" title="Visualizar Cadastro">
                             </a>
                             <a href="cpf_editar.php?idPf=<?php echo($row_rs_PF['idPf']);?>" <?php if($row_rs_permissao['permissao'] != 'e' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
-                                <img src="imagens/editar.png" alt="Editar" class="action-icon" title="Editar registro">
+                                <img src="imagens/editar.png" alt="Editar" class="action-icon" title="Editar Cadastro">
                             </a>
                             <a href="delete.php?idPf=<?php echo($row_rs_PF['idPf']);?>" onclick="return confirm('Tem certeza que deseja excluir este registro?');">
-                                <img src="imagens/deletar.png" alt="Excluir" class="action-icon" title="Excluir registro">
+                                <img src="imagens/deletar.png" alt="Excluir" class="action-icon" title="Excluir Cadastro">
                             </a>
                         </td>
                     </tr>
