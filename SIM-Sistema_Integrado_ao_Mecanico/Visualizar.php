@@ -39,20 +39,19 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
     </header>
     <section class="form-section-cpf">
     <h2>Dados Cadastrais</h2></br>
-            <div class="form-group-cpf">
-               <h1>CPF</h1>
-                <p> <?php echo($row_rs_PF['cpf']);?> </p>
+        <div class="form-group-cpf">
+                <label for="nome">Nome</label>
+                <p> <?php echo($row_rs_PF['nome']);?> </p>
+            </div>
+            <br>
+        <div class="form-group-cpf">
+             <label for="cpf">CPF</label>
+            <p> <?php echo($row_rs_PF['cpf']);?> </p>
             </div>
             <br>
             <div class="form-group-cpf">
-            <h1>Nome</h1>
-            <p> <?php echo($row_rs_PF['nome']);?> </p>
-            
-            </div>
-            <br>
-            <div class="form-group-cpf">
-            <h1>RG</h1>
-            <p> <?php echo($row_rs_PF['rg']);?> </p>
+                <label for="rg">RG</label>
+                 <p> <?php echo($row_rs_PF['rg']);?> </p>
             </div>
             <br>
            <!-- <div class="form-group-cpf">
@@ -61,34 +60,33 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             </div>
             <br>-->
             <div class="form-group-cpf">
-            <h1>E-mail</h1>
-            <p> <?php echo($row_rs_PF['email']);?> </p>
+                <label for="email">E-mail</label>
+                <p> <?php echo($row_rs_PF['email']);?> </p>
             </div>
             <br>
             <div class="form-group-cpf">
-            <h1>Telefone</h1>
-            <p> <?php echo($row_rs_PF['celular']);?> </p>
+                <label for="telefone">Telefone</label>
+                <p> <?php echo($row_rs_PF['celular']);?> </p>
             </div>
             <br>
             <div class="form-group-cpf">
-            <h1>Placa</h1>
-            <p> <?php echo($row_rs_PF['placa']);?> </p>
+                <label for="endereco">Endereço</label>
+                <p> <?php echo($row_rs_PF['endereco']);?> </p>
             </div>
             <br>
             <div class="form-group-cpf">
-            <h1>Veículo</h1>
-            <p> <?php echo($row_rs_PF['marca']." ".$row_rs_PF['modelo']); ?></p>
-                    
+                <label for="idVeiculo">Veículo:</label>
+                <p> <?php echo($row_rs_PF['marca']." ".$row_rs_PF['modelo']); ?></p>     
             </div>  
             <br>
             <div class="form-group-cpf">
-            <h1>Cor do Carro</h1>
-            <p> <?php echo($row_rs_PF['corCarro']);?> </p>
+                <label for="corCarro">Cor do Carro</label>
+                <p> <?php echo($row_rs_PF['corCarro']);?> </p>
             </div>
             <br>
             <div class="form-group-cpf">
-            <h1>Endereço</h1>
-            <p> <?php echo($row_rs_PF['endereco']);?> </p>
+                <label for="placa">Placa</label>
+                <p> <?php echo($row_rs_PF['placa']);?> </p>
             </div>
             <br>
             <!--<div class="form-group-cpf">
@@ -112,12 +110,12 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <p> 01/07/2024 </p>
             </div>-->
             <div class="form-group-cpf">
-            <h1>Status</h1>
-            <p> Em Andamento </p>
+                <label for="status">Status</label>
+                <p> Em Andamento </p>
             </div>
             <br>
         
-            <input type="reset" value="Cancelar" onclick="window.location.href='ListaCadastro.php'">
+            <input type="reset" value="Voltar" onclick="window.location.href='ListaCadastro.php'">
 
     </section>
     <?php 

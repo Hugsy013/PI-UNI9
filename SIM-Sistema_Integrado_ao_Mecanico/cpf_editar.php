@@ -93,12 +93,12 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
     <h2>Dados Cadastrais</h2></br>
         <form action="" method="post">
             <div class="form-group-cpf">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" value="<?php echo($row_rs_editar['cpf']);?>" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-10">
-            </div>
-            <div class="form-group-cpf">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" value="<?php echo($row_rs_editar['nome'])?>" required>
+            </div>
+            <div class="form-group-cpf">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" value="<?php echo($row_rs_editar['cpf']);?>" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-10">
             </div>
             <div class="form-group-cpf">
                 <label for="rg">RG</label>
@@ -121,9 +121,9 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
                        title="Formato: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX">
             </div>
             <div class="form-group-cpf">
-                <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa" value="<?php echo($row_rs_editar['placa'])?>" required placeholder="ABC1D23 ou ABC1234">
-            </div>
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco" value="<?php echo($row_rs_editar['endereco'])?>" placeholder="Rua Exemplo, 123">
+            </div> 
             <div class="form-group-cpf">
                 <label for="idVeiculo">Veículo:</label>
                 <select name="idVeiculo" id="idVeiculo">
@@ -137,10 +137,11 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
                 <input type="text" name="corCarro" id="corCarro" value="<?php echo($row_rs_editar['corCarro'])?>">
             </div>
             <div class="form-group-cpf">
-                <label for="endereco">Endereço</label>
-                <input type="text" name="endereco" id="endereco" value="<?php echo($row_rs_editar['endereco'])?>" placeholder="Rua Exemplo, 123">
-            </div> 
-            <input type="reset" value="Cancelar" onclick="window.location.href='ListaCadastro.php'">
+                <label for="placa">Placa</label>
+                <input type="text" name="placa" id="placa" value="<?php echo($row_rs_editar['placa'])?>" required placeholder="ABC1D23 ou ABC1234">
+            </div>
+           
+            <input type="reset" value="Voltar" onclick="window.location.href='ListaCadastro.php'">
             <input type="submit" name="submit" id="submit" value="Enviar">
         </form>
     </section>

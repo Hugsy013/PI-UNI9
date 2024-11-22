@@ -91,12 +91,12 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
     <h2>Dados Cadastrais</h2></br>
         <form action="" method="post">
             <div class="form-group-cpf">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-10">
-            </div>
-            <div class="form-group-cpf">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="form-group-cpf">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-10">
             </div>
             <div class="form-group-cpf">
                 <label for="rg">RG</label>
@@ -119,8 +119,8 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
                        title="Formato: (XX) XXXXX-XXXX ou (XX) XXXX-XXXX">
             </div>
             <div class="form-group-cpf">
-                <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa" required placeholder="ABC1D23 ou ABC1234">
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Rua Exemplo, 123">
             </div>
             <div class="form-group-cpf">
                 <label for="idVeiculo">Veículo:</label>
@@ -133,11 +133,11 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
             <div class="form-group-cpf">
                 <label for="corCarro">Cor do Carro</label>
                 <input type="text" name="corCarro" id="corCarro">
-            </div>
-            <div class="form-group-cpf">
-                <label for="endereco">Endereço</label>
-                <input type="text" name="endereco" id="endereco" placeholder="Rua Exemplo, 123">
             </div> 
+            <div class="form-group-cpf">
+                <label for="placa">Placa</label>
+                <input type="text" name="placa" id="placa" required placeholder="ABC1D23 ou ABC1234">
+            </div>
             <!--<div class="form-group-cpf">
                 <label for="colaborador">Colaborador responsável</label>
                 <input type="text" name="colaborador" id="colaborador">
