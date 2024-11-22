@@ -120,7 +120,7 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
             </div>
             <div class="form-group-cpf">
                 <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa" required placeholder="ABC1D23 ou ABC1D23">
+                <input type="text" name="placa" id="placa" required placeholder="ABC1D23 ou ABC1234">
             </div>
             <div class="form-group-cpf">
                 <label for="idVeiculo">Veículo:</label>

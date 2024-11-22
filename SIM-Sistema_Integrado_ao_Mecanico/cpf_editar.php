@@ -84,7 +84,7 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
         <form action="" method="post">
             <div class="form-group-cpf">
                 <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" value="<?php echo($row_rs_editar['cpf']);?> " required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-10">
+                <input type="text" id="cpf" name="cpf" value="<?php echo($row_rs_editar['cpf']);?>" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 123.456.789-10">
             </div>
             <div class="form-group-cpf">
                 <label for="nome">Nome</label>
@@ -112,7 +112,7 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
             </div>
             <div class="form-group-cpf">
                 <label for="placa">Placa</label>
-                <input type="text" name="placa" id="placa" value="<?php echo($row_rs_editar['placa'])?>" required placeholder="ABC1D23 ou ABC1D23">
+                <input type="text" name="placa" id="placa" value="<?php echo($row_rs_editar['placa'])?>" required placeholder="ABC1D23 ou ABC1234">
             </div>
             <div class="form-group-cpf">
                 <label for="idVeiculo">Veículo:</label>
