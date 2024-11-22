@@ -29,7 +29,6 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
     <header>
         <div class="logo">
             <img src="imagens/logo1.png" alt="Logo">
-            <h1>Sistema Integrado ao Mecânico</h1>
         </div>
         <div class="user-button">
             <img src="imagens/usuario.png" alt="Usuário">
@@ -69,14 +68,14 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
                         <td><?php echo ($row_rs_PF['marca']." ".$row_rs_PF['modelo']); ?></td>
                         <td><?php echo ($row_rs_PF['placa']); ?></td>
                         <td class="action-cell">
-                            <a href="delete.php?idPf=<?php echo($row_rs_PF['idPf']);?>" onclick="return confirm('Tem certeza que deseja excluir este registro?');">
-                                <img src="imagens/deletar.png" alt="Excluir" class="action-icon" title="Excluir registro">
-                            </a>
                             <a href="Visualizar.php?idPf=<?php echo($row_rs_PF['idPf']);?>">
                                 <img src="imagens/visualizar.png" alt="Visualizar" class="action-icon" title="Visualizar Cadastro">
                             </a>
                             <a href="cpf_editar.php?idPf=<?php echo($row_rs_PF['idPf']);?>" <?php if($row_rs_permissao['permissao'] != 'e' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
                                 <img src="imagens/editar.png" alt="Editar" class="action-icon" title="Editar registro">
+                            </a>
+                            <a href="delete.php?idPf=<?php echo($row_rs_PF['idPf']);?>" onclick="return confirm('Tem certeza que deseja excluir este registro?');">
+                                <img src="imagens/deletar.png" alt="Excluir" class="action-icon" title="Excluir registro">
                             </a>
                         </td>
                     </tr>

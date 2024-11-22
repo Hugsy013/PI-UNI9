@@ -23,12 +23,22 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formularioCAD.css">
     <title>Formulário CPF</title>
 </head>
 <body>
-    <h2>Dados Cadastrais</h2>
+    <header>
+        <div class="logo">
+            <img src="imagens/logo1.png" alt="Logo">
+        </div>
+        <div class="user-button">
+            <img src="imagens/usuario.png" alt="Usuário">
+            <ul class="dropdown-menu">
+            <li><a href="logout.php">Sair</a></li>
+        </ul>
+    </header>
     <section class="form-section-cpf">
-        
+    <h2>Dados Cadastrais</h2></br>
             <div class="form-group-cpf">
                <h1>CPF</h1>
                 <p> <?php echo($row_rs_PF['cpf']);?> </p>

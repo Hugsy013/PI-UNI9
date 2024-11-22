@@ -12,7 +12,8 @@ body {
 }
 
 header {
-    background-color: #ffffff;
+    position: relative;
+    background-color:  #f9f9f9;
     color: rgb(0, 0, 0);
     padding: 20px;
     display: flex;
@@ -28,14 +29,10 @@ header .logo {
 }
 
 header .logo img {
-    height: 90px;
+    height: 70px;
     margin-right: 20px;
 }
 
-header .logo h1 {
-    font-size: 18px;
-    font-weight: bold;
-}
 
 /* User dropdown */
 header .user-button {
