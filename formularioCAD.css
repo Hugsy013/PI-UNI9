@@ -1,0 +1,261 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+
+}
+
+header {
+    position: relative;
+    background-color:  #f9f9f9;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    height: 70px;
+    margin-right: 20px;
+}
+
+/* User dropdown */
+header .user-button {
+    position: fixed;
+    top: 10px; /* Posição no topo da página */
+    right: 20px; /* Posição no canto direito */
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    width: 40px; /* Tamanho do contêiner */
+    height: 40px; /* Tamanho do contêiner */
+}
+
+.user-button:hover {
+    background-color: #e0e0e0;
+}
+
+header .user-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 70%;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 60px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu li {
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 
+
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+.user-button:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-section-cpf {
+    max-width: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-group-cpf {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+input[type="reset"] {
+    background-color: #dc3545; /* Cor vermelha */
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.container-botoes {
+    display:flex;
+    justify-content: flex-end; /* Alinha os botões à direita */
+    margin-top: 50px;
+    gap: 15px;
+}
+
+@media (max-width: 480px) {
+    form {
+        display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    gap: 10px; /* Espaçamento entre os elementos */
+    width: 100%; /* Ajusta a largura do formulário */
+    align-items: center; /* Centraliza os itens horizontalmente */;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+        color: #505050;
+        margin-top: 10px;
+    }
+
+    .form-section-cnpj {
+        max-width: 1200px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
+
+    .container-botoes {
+        display: flex;
+        justify-content: center; /* Alinha os botões à direita */
+        margin-top: 50px;
+        gap: 15px;
+    }
+}
+
+
+/* Tabela */
+
+/* Estilos básicos para centralizar a tabela */
+  
+  /* Estilos da tabela */
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: -300px;
+}
+  
+  /* Estilo para o cabeçalho */
+  th {
+    background-color: #505050;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Estilos para as células de dados */
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  /* Efeito ao passar o mouse */
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Alterna a cor das linhas 
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }*/

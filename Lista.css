@@ -1,0 +1,258 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    position: relative;
+    background-color:  #f9f9f9;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    height: 70px;
+    margin-right: 20px;
+}
+
+
+/* User dropdown */
+header .user-button {
+    position: fixed;
+    top: 10px; /* Posição no topo da página */
+    right: 20px; /* Posição no canto direito */
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    width: 40px; /* Tamanho do contêiner */
+    height: 40px; /* Tamanho do contêiner */
+}
+
+.user-button:hover {
+    background-color: #e0e0e0;
+}
+
+header .user-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.add-client {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 70%;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 60px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu li {
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 
+
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+.user-button:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.add-icon {
+    width: 45px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.add-client a {
+    display: inline-block;
+}
+
+.client-list {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+.client-list .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.client-list .header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f5f5f5;
+}
+
+thead th {
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo h1 {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .client-list {
+        padding: 10px;
+    }
+
+    .add-icon {
+        width: 35px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 14px;
+    }
+
+    .add-icon {
+        width: 30px;
+        height: 20px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .action-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .client-list {
+        padding: 5px;
+    }
+}
+
+.add-client {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+.action-cell a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    display: inline-block; /* Cada link ocupa um bloco sem espaços */
+    margin: 0 5px; /* Adiciona espaçamento entre ícones */
+}
+
+.action-cell img {
+    vertical-align: middle; /* Garante alinhamento correto dos ícones */
+    width: 20px; /* Ajusta tamanho dos ícones */
+    height: 20px;
+}
+
+/* Opcional: Remove espaços extras entre links */
+.action-cell {
+    font-size: 0; /* Remove espaços entre elementos inline */
+}
+
+.action-cell a {
+    font-size: 14px; /* Redefine o tamanho da fonte para o conteúdo interno */
+}
