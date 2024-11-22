@@ -47,6 +47,7 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
         <div class="header">
             <h2>Listagem de Clientes</h2>
         </div>
+        <br>
         <table>
             <thead>
                 <tr>
