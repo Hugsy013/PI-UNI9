@@ -11,7 +11,7 @@ $rs_permissao = mysqli_query($conn_bd_sim, $permissao) or die($mysqli_error($con
 $row_rs_permissao = mysqli_fetch_assoc($rs_permissao);
 
 if($row_rs_permissao['permissao'] != 'a' && $row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce'){
-    header("Location: index.php");
+    header("Location: ListaCadastro.php");
 }
 
 
@@ -52,7 +52,7 @@ $executar_pedido = mysqli_query($conn_bd_sim, $inserir_pedido) or die($mysqli_er
 
 if($executar_inserir == true /*&& $executar_pedido == true*/){
 	echo('<script> alert("Dado inserido !! :)"); 
-	window.location.href="index.php";
+	window.location.href="ListaCadastro.php";
 	</script>');
 } else {
 	
@@ -147,8 +147,10 @@ if($executar_inserir == true /*&& $executar_pedido == true*/){
                 <textarea name="problema" id="problema" rows="4" cols="50"></textarea>
             </div>-->
 
+            <input type="reset" value="Voltar" onclick="window.location.href='ListaCadastro.php'">
             <input type="submit" value="Enviar">
         </form>
+
     </section>
 
     <?php 

@@ -55,11 +55,11 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <p> <?php echo($row_rs_PF['rg']);?> </p>
             </div>
             <br>
-            <div class="form-group-cpf">
+           <!-- <div class="form-group-cpf">
             <h1>Data de Nascimento</h1>
             <p> <?php echo($row_rs_PF['nascimento']);?> </p>
             </div>
-            <br>
+            <br>-->
             <div class="form-group-cpf">
             <h1>E-mail</h1>
             <p> <?php echo($row_rs_PF['email']);?> </p>
@@ -115,6 +115,9 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <h1>Status</h1>
             <p> Em Andamento </p>
             </div>
+            <br>
+        
+            <input type="reset" value="Cancelar" onclick="window.location.href='ListaCadastro.php'">
 
     </section>
     <?php 

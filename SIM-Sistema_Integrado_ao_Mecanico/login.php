@@ -54,7 +54,6 @@ $row_rs_login = mysqli_fetch_assoc($rs_login);
                 <div class="input-group">
                     <input type="password" name="password" id="password" placeholder="Digite a sua senha" required>
                 </div>
-                <a href="forgot.html" class="forgot-password">Esqueci minha senha</a>
                 <button type="submit" class="login-btn">Login</button>
             </form>
         </div>

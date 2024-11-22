@@ -13,7 +13,7 @@ $rs_permissao = mysqli_query($conn_bd_sim, $permissao) or die($mysqli_error($con
 $row_rs_permissao = mysqli_fetch_assoc($rs_permissao);
 
 if($row_rs_permissao['permissao'] != 'a' && $row_rs_permissao['permissao'] != 'e' && $row_rs_permissao['permissao'] != 'ce'){
-    header("Location: index.php");
+    header("Location: ListaCadastro.php");
 }
 $veiculo = "SELECT * FROM tb_veiculo";
 
@@ -57,7 +57,7 @@ $executar_pedido = mysqli_query($conn_bd_sim, $inserir_pedido) or die($mysqli_er
 
 if($executar_dado == true /*&& $executar_pedido == true*/){
 	echo('<script> alert("Dado atualizado !! :)"); 
-	window.location.href="index.php";
+	window.location.href="ListaCadastro.php";
 	</script>');
 } else {
 	
@@ -140,6 +140,7 @@ if($executar_dado == true /*&& $executar_pedido == true*/){
                 <label for="endereco">Endereço</label>
                 <input type="text" name="endereco" id="endereco" value="<?php echo($row_rs_editar['endereco'])?>" placeholder="Rua Exemplo, 123">
             </div> 
+            <input type="reset" value="Cancelar" onclick="window.location.href='ListaCadastro.php'">
             <input type="submit" name="submit" id="submit" value="Enviar">
         </form>
     </section>
