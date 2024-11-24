@@ -36,17 +36,17 @@ $row_rs_PF = mysqli_fetch_assoc($rs_PF);
             <li><a href="logout.php">Sair</a></li>
         </ul>
     </div>
-    </header>
-    <div class="add-client" <?php if($row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
+</header>
+<br>
+<section class="client-list">
+    <div class="header">
+        <h2>Listagem de Clientes</h2>
+        <div class="add-client" <?php if($row_rs_permissao['permissao'] != 'c' && $row_rs_permissao['permissao'] != 'ce' && $row_rs_permissao['permissao'] != 'a'){echo('style="display: none;"');}?>>
             <a href="cpf.php?" title="Cadastrar Cliente">
                 <img src="imagens/inserir.png" alt="Inserir Registro" class="add-icon">
-            </a>    
-        </div>
-        <br>
-    <section class="client-list">
-        <div class="header">
-            <h2>Listagem de Clientes</h2>
-        </div>
+            </a>     
+            </div>
+</div>
         <br>
         <table>
             <thead>

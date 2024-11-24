@@ -61,11 +61,6 @@ header .user-button img {
     height: 20px;
 }
 
-.add-client {
-    position: absolute;
-    right: 20px;
-    top: 100px;
-}
 
 .dropdown-menu {
     position: absolute;
@@ -121,7 +116,8 @@ header .user-button img {
 }
 
 .add-client a {
-    display: inline-block;
+    display: flex;
+    
 }
 
 .client-list {
@@ -230,11 +226,11 @@ tbody td {
     }
 }
 
-.add-client {
+/* .add-client {
     position: absolute;
     right: 20px;
     top: 100px;
-}
+} */
 
 .action-cell a {
     text-decoration: none; /* Remove sublinhado dos links */
@@ -254,5 +250,5 @@ tbody td {
 }
 
 .action-cell a {
-    font-size: 14px; /* Redefine o tamanho da fonte para o conteúdo interno */
+    font-size: 14px; /* Redefine o tamanho da fonte para o conteúdo interno */
 }
