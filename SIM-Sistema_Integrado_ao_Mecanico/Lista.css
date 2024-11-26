@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +33,6 @@ header .logo img {
 }
 
 
-/* User dropdown */
 header .user-button {
     position: fixed;
     top: 10px; /* Posição no topo da página */
@@ -244,7 +242,6 @@ tbody td {
     height: 20px;
 }
 
-/* Opcional: Remove espaços extras entre links */
 .action-cell {
     font-size: 0; /* Remove espaços entre elementos inline */
 }
